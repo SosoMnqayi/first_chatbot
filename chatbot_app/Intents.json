@@ -1,0 +1,181 @@
+{
+ "intents" : [{
+  "tag" : "greeting",
+  "pattern" :["Hello",
+               "Hey",
+              "Hi",
+              "Hola", 
+              "Good day",
+              "Whatsup",
+              "hi bot",
+              "good morning",
+              "good evening"
+            
+               ],
+  "response" : [
+              "Hey" , 
+              "how can l help you ?",
+              "How can  l help?",
+              "Hello, thanks for visiting",
+              "Hola",
+              "Hi there, what can I do for you?",
+              "How may assist you?",
+              "hey ,how are you?",
+              "Sure ,how is your day?"
+              
+  ]
+ }
+,{ "tag" : "Registration",
+   "pattern" : [
+            "where can i get help with registration?",
+            "Can you tell me where to seek assistance for registration?",
+            "I need help with registration. Where should I go?",
+            "Where can I find support for the registration process?",
+            "Is there a place on campus where they assist with registration?",
+            "How can I get guidance regarding registration?",
+            "Where do I go if I have questions about registering for classes?",
+            "What's the location for registration assistance?",
+            "I'm looking for help with my registration. Where can I get it?",
+            "Can you direct me to the registration help center?",
+            "Who can provide assistance with the registration procedure?",
+            "Where's the office for registration support?",
+            "I'm confused about registration. Where can I find answers?",
+           "What's the resource for registration-related inquiries?",
+           "Could you point me in the right direction for registration help?",
+            "How do I access support for registration-related issues?",
+           "Is there a specific department that assists with registration?",
+            "I need guidance on registration. Where can I get it?",
+            "Who should I contact for registration assistance?",
+            "Where's the registration help desk located?",
+            "Can you recommend where I should go for registration help?"
+          
+           ],
+   "response" : ["You can receive assistance with registration by visiting the Student Services Center, which is located in [Ongoye University Of Zululand/office number 10]. The staff there can provide guidance and support for the registration process. Additionally, you can reach out to the Registration Help Desk at [Contact Information] for any specific inquiries or assistance. They are dedicated to helping you with your registration needs."]
+  },
+  
+    {"tag" :"Registration",
+    "pattern":[
+      "What is the cost of registration?",
+      "How much does registration cost?",
+      "Can you tell me the registration fee?",
+      "What's the fee for registration?",
+      "How do I pay the registration fee?",
+      "What's the price of registration?",
+      "What's the tuition fee for this semester?",
+      "How expensive is the registration?",
+      "Tell me about the fees for enrollment",
+      "What's the fee structure for registration?"
+    ],
+      "response" : ["The registration fee for the current academic year is free.and any applicable discounts or scholarships. You can find detailed information about the registration fee, including payment methods and deadlines, on the university's official website or by contacting the university's finance department."]
+
+},
+
+  { "tag" :"Rules and regulations",
+  "pattern":[
+        "Can you provide details on the rules and regulations?",
+         "I'd like to know more about the university's policies. Tell me about the rules and regulations.",
+         "What are the guidelines and regulations I need to be aware of?",
+         "Inform me about the policies and rules in place.",
+         "Could you share information regarding the university's rules and regulations?",
+         "I'm interested in learning about the governing policies. Please tell me about the rules and regulations.",
+          "What are the dos and don'ts? Explain the rules and regulations.",
+          "Tell me about the code of conduct and policies.",
+         "I want to familiarize myself with the university's regulations. Share details about the rules.",
+         "Please provide an overview of the rules and regulations in effect."
+   
+     ],
+     "response" :[
+      "The university's rules and regulations cover academic policies, conduct expectations, financial matters, housing rules, security guidelines, and more. You can find detailed information in the official student handbook."]       
+},
+{
+    "tag" : "Finance",
+    "pattern" : [
+        "Could you provide information about the finance department?",
+          "I'd like to learn more about the finance department. What can you tell me?",
+         "Tell me what you know about the finance department.",
+          "What can you share about the finance department?",
+          "Give me details on the finance department.",
+          "Could you give me an overview of the finance department?",
+          "I'm interested in the finance department. Tell me more.",
+          "Share some insights into the finance department, please.",
+          "Inform me about the finance department.",
+           "I want to know about the finance department. What's there to know?"
+                 
+                ],
+    "response" : ["The Finance Department at our university plays a crucial role in managing the financial aspects of the institution. It oversees budgeting, financial planning, and the allocation of resources. Additionally, the Finance Department provides support for students regarding tuition payments, financial aid, and scholarships. If you have specific questions or need assistance with financial matters, I can guide you or connect you with the appropriate resources within the department."]
+ 
+  },
+  {
+   
+  "tag" : "Security",
+  "pattern" : ["Does the university have security cameras?",
+               "Are there security cameras on campus?",
+               "Are surveillance cameras in place at the university?",
+               "Has the university installed cameras for security?",
+               "Do they use CCTV cameras at the university?",
+               "Are there any video cameras on the university grounds?",
+               "Is there a camera system at the university?",
+                "Has the university implemented camera surveillance?",
+                "Are security cameras operational at the university?",
+                "Is the campus equipped with security camera systems?"
+    ]  ,
+    "response" :["Yes, the university has security cameras installed across the campus to ensure the safety and security of students, staff, and visitors."]
+  
+  },
+  {
+    "tag" : "housing",
+    "pattern" :[
+      "Can you provide information about the housing department?",
+      "Tell me more about the housing department.",
+     "What do I need to know about the housing department?",
+     "I'd like to learn about the housing department.",
+     "Could you give me details on the housing department?",
+    "What services does the housing department offer?",
+     "Please share insights about the housing department.",
+     "What's the role of the housing department?",
+     "How can I contact the housing department?",
+     "Give me an overview of the housing department."
+
+    ],
+    "response" :[ "Sure! The Housing Department manages on-campus housing, including room assignments, maintenance, and security. They enforce housing policies for a safe and comfortable living experience. Contact info can be found on the university website or in your welcome packet."]  
+  },
+  {
+    "tag":"Recreation",
+    "pattern" :[
+           "Why is recreation important at the university?",
+           "What role does recreation play in the university environment?",
+           "What are the benefits of recreational activities in a university?",
+           "Can you explain the significance of recreation in a university setting?",
+           "How does recreational involvement impact students and the university community?",
+           "Tell me about the value of recreational opportunities available in the university.",
+           "What advantages does the university gain from promoting recreation?",
+           "What is the purpose of having recreational facilities and programs at the university?",
+           "Why should students engage in recreational activities while at the university?",
+           "Discuss the relevance of recreation in the context of a university campus."
+  ],
+    "response" : ["recreation in the university is not just about having fun; it contributes to the holistic development of students, promotes a healthy campus culture, and enhances the overall university experience."]
+},
+  {
+    "tag":"Academic Issues",
+    "pattern":["How can I get help with my studies?",
+           "Where do I go for academic assistance?",
+           "Who can provide guidance with my studies?",
+           "I need support in my studies, where should I look?",
+           "What resources are available to help me with my studies?",
+           "Where can I seek academic guidance?",
+           "Who can assist me with my coursework?",
+           "What services are offered for students needing study guidance?",
+           "How do I access study support at this institution?",
+           "Can you point me in the right direction for academic help?"],
+    "response" : ["You can find academic guidance through academic advisors, tutoring services, study groups, library resources, online platforms, faculty office hours, student support services, your student portal, and peer mentoring programs. Reach out to these resources for assistance and support in your studies."]
+  
+  
+  }
+]
+}
+  
+  
+  
+
+  
+  

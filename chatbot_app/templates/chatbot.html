@@ -1,0 +1,182 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Chat </title>
+    <link rel="stylesheet" href="{% static '/styles.ss' %}">
+    <style>
+        html {
+    box-sizing: border-box;
+    --scrollbarBG: #fff;
+    --thumbBG: #90a4ae;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: var(--body-bg);
+    font-family: "Baloo 2", cursive;
+}
+
+.chat-container {
+    max-width: 420px;
+    margin: 25px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 40vw;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    background: #01425c;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header img {
+    height: 3rem;
+    width: auto;
+    padding-right: 225px;
+}
+header p {
+    letter-spacing: 1.2px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5 2.5vw;
+    scrollbar-width: thin;
+    scrollbar-color: black;
+}
+
+.user-message {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.user-message p {
+    background-color: #2f4f4f;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.chatbot-message {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.chatbot-message p {
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.user-input {
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+form {
+    display: flex;
+    padding: 10px;
+    background: white;
+    color: rgb(255, 255, 255);
+    border-radius: 0px 0px 10px 10px;
+}
+ form *{
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1em;
+ }
+
+textarea[type="text"] {
+    flex: 1;
+    background: #01425c;
+    outline: none;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    color: white;
+}
+
+button {
+    margin-left: 10px;
+    background: #01425c;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 3px solid rgba(255, 500, 500, 0.7);
+}
+
+button:hover {
+        background-color: #b1b6b6fb;
+    }
+
+    </style>
+        
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <img src="https://th.bing.com/th?id=OIP.5zE7d3U69x8MSC_tGz5l1wAAAA&w=235&h=265&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"/>
+            <p>Chat</p>
+        </header>
+        <div class="chat-box">
+            {% if user_input %}
+                <div class="user-message">
+                    <p>You: {{ user_input }}</p>
+                </div>
+            {% endif %}
+            {% if response_from_chatbot %}
+                <div class="chatbot-message">
+                    <p>Chatbot: {{ response_from_chatbot }}</p>
+                </div>
+            {% endif %}
+        </div>
+        <div class="user-input">
+            <form method="post" action="{% url 'chatbot' %}">
+                {% csrf_token %}
+                <textarea type="text" name="user_input" id="user_input" placeholder="Type your message..." required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+</html>
